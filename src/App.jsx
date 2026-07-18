@@ -134,7 +134,7 @@ export default function App() {
             <h2 className="reveal">Let's build something.</h2>
             <p className="sec-sub reveal">I'm looking for internship and co-op opportunities in software and embedded engineering. If my work looks interesting, I'd love to hear from you.</p>
             <div className="contact-links reveal">
-              <a className="btn btn-primary" href="mailto:shloklande@gmail.com">shloklande@gmail.com</a>
+              <a className="btn btn-primary" href="mailto:shloklande[at]gmail.com">shloklande@gmail.com</a>
               <a className="btn btn-ghost" href="https://linkedin.com/in/shloklande" target="_blank" rel="noopener">LinkedIn</a>
               <a className="btn btn-ghost" href="https://github.com/ShlokLande" target="_blank" rel="noopener">GitHub</a>
             </div>
