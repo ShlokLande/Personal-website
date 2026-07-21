@@ -64,12 +64,13 @@ export default function App() {
             <div className="timeline">
               <div className="t-item reveal">
                 <div className="t-date">2025 — Present</div>
-                <h3>Embedded Software Subteam Member</h3>
+                <h3>Embedded Software Developer</h3>
                 <div className="org">UBC Solar · Vancouver, BC</div>
                 <ul>
                   <li>Developed firmware for a BNO08x IMU on an STM32F103 microcontroller using FreeRTOS, integrating I2C and CAN bus for real-time vehicle telemetry.</li>
                   <li>Debugged low-level I2C driver issues and implemented bus recovery routines to fix hardware communication failures during sensor bring-up.</li>
-                  <li>Authored a design review document (DR0) for IMU integration architecture and 2026ed technical updates to the engineering team.</li>
+                  <li>Built Grafana dashboards over InfluxDB to visualize live CAN bus telemetry from the solar car, writing Flux queries
+                  to surface vehicle and driver-relay data in real time</li>
                 </ul>
               </div>
               <div className="t-item reveal">
