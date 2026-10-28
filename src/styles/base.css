@@ -1,0 +1,134 @@
+/* ---------------------------------------------------------------
+   Tokens. A cream paper desk set on a green self-healing cutting mat.
+---------------------------------------------------------------- */
+:root {
+  --mat: #1c3a30;
+  --mat-deep: #16302a;
+  --mat-ink: #ece6cf; /* text and lines printed on the mat */
+  --mat-ink-soft: rgba(236, 230, 207, 0.72);
+  --paper: #faf6ea;
+  --paper-edge: #e9e0cb;
+  --ink: #23261f;
+  --ink-soft: #4f4c43;
+  --muted: #6f6a5d;
+  --fern: #2f6b4f; /* links, buttons */
+  --fern-deep: #22513b;
+  --tape: #cfe0b8;
+  --leaf: #e4ecdc; /* tag background */
+  --highlight: #f1e38a;
+
+  --display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --body: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --code: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --measure: 38em;
+  --radius: 4px;
+  --shadow-paper: 0 1px 0 var(--paper-edge), 0 22px 36px -20px rgba(0, 0, 0, 0.7), 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--mat);
+  color: var(--mat-ink);
+  font-family: var(--body);
+  font-size: 16.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* The mat: a fine 24px grid, a heavier line every 120px, and ruler ticks along the top and left edges. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--mat);
+  background-image:
+    linear-gradient(rgba(236, 230, 207, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 230, 207, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(236, 230, 207, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 230, 207, 0.045) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  background-position: -1px -1px;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--display);
+  font-weight: 450;
+  font-variation-settings: 'SOFT' 100, 'opsz' 96;
+  letter-spacing: -0.015em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+code,
+.code {
+  font-family: var(--code);
+  font-size: 0.88em;
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--highlight);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--highlight);
+  color: var(--ink);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+  }
+}

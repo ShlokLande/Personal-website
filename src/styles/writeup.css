@@ -1,0 +1,168 @@
+/* ---------------------------------------------------------------
+   Write-up pages (projects and UBC Solar)
+---------------------------------------------------------------- */
+.crumbs {
+  margin: 34px 0 24px;
+  font-size: 15px;
+}
+.crumbs a {
+  color: var(--mat-ink-soft);
+  text-decoration: none;
+}
+.crumbs a:hover {
+  color: var(--mat-ink);
+}
+.wu-kicker {
+  font-size: 15.5px;
+  color: var(--muted);
+}
+.writeup h1 {
+  margin-top: 8px;
+  font-size: clamp(44px, 7vw, 82px);
+  font-weight: 420;
+  font-variation-settings: 'SOFT' 100, 'opsz' 144;
+  letter-spacing: -0.025em;
+}
+.wu-summary {
+  margin-top: 14px;
+  max-width: 34em;
+  font-size: clamp(18px, 2.2vw, 21px);
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.wu-body {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr);
+  gap: 56px;
+  margin-top: 46px;
+}
+.wu-content {
+  max-width: 820px;
+  min-width: 0;
+}
+.wu-section + .wu-section {
+  margin-top: 56px;
+}
+.wu-section h2 {
+  font-size: clamp(26px, 3vw, 32px);
+  margin-bottom: 14px;
+}
+.wu-section h3 {
+  font-size: 22px;
+  margin: 30px 0 10px;
+}
+.wu-content p {
+  font-size: 17px;
+  line-height: 1.72;
+  color: #34312b;
+  max-width: var(--measure);
+}
+.wu-content p + p {
+  margin-top: 14px;
+}
+.wu-content a {
+  color: var(--fern);
+  text-underline-offset: 3px;
+}
+.wu-content .fig {
+  margin: 26px 0 30px;
+}
+.wu-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  max-width: var(--measure);
+}
+.wu-list li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: #34312b;
+}
+.wu-list li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 0.68em;
+  width: 9px;
+  height: 9px;
+  border-radius: 2px;
+  background: #a8c795;
+}
+.wu-tags {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.wu-tags li {
+  padding: 5px 12px;
+  border-radius: 999px;
+  background: var(--leaf);
+  color: var(--fern-deep);
+  font-size: 14.5px;
+}
+.wu-note {
+  margin-top: 18px;
+  padding: 14px 18px;
+  border-left: 3px solid var(--tape);
+  background: #f3eedf;
+  border-radius: 0 6px 6px 0;
+}
+@media (max-width: 900px) {
+  .wu-body {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .wu-body > .toc {
+    display: none;
+  }
+}
+
+/* UBC Solar: the "what I've worked on" jump list near the top */
+.jump {
+  margin-top: 40px;
+}
+.jump-title {
+  font-size: 24px;
+  margin-bottom: 14px;
+}
+.jump-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+.jump-list a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+  padding: 16px 18px;
+  border: 1px solid var(--paper-edge);
+  border-radius: 6px;
+  background: #f3eedf;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.jump-list a:hover {
+  background: var(--leaf);
+  border-color: #c9d8bc;
+}
+.jump-name {
+  font-family: var(--display);
+  font-variation-settings: 'SOFT' 100;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.jump-line {
+  font-size: 14.5px;
+  color: var(--muted);
+}

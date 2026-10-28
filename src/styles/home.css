@@ -1,0 +1,171 @@
+/* ---------------------------------------------------------------
+   Home page
+---------------------------------------------------------------- */
+.intro {
+  padding: 76px 0 8px;
+}
+.intro h1 {
+  font-size: clamp(54px, 9.5vw, 108px);
+  font-weight: 420;
+  font-variation-settings: 'SOFT' 100, 'opsz' 144;
+  letter-spacing: -0.025em;
+  line-height: 0.98;
+  color: var(--mat-ink);
+}
+.intro-line {
+  margin-top: 20px;
+  max-width: 34em;
+  font-size: clamp(17px, 2vw, 20px);
+  line-height: 1.55;
+  color: var(--mat-ink-soft);
+}
+.intro-links {
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.block {
+  margin-top: 92px;
+}
+.block-head h2 {
+  font-size: clamp(32px, 4vw, 42px);
+  color: var(--mat-ink);
+}
+.block-hint {
+  margin: 8px 0 34px;
+  font-size: 16px;
+  color: var(--mat-ink-soft);
+}
+
+/* the wide UBC Solar card: words on the left, picture on the right */
+.card-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  grid-template-areas:
+    'body pic'
+    'foot pic';
+}
+.card-wide::before {
+  left: 22%;
+}
+.card-wide .card-body {
+  grid-area: body;
+  padding: 30px 30px 0;
+}
+.card-wide .card-foot {
+  grid-area: foot;
+  margin: 20px 30px 24px;
+}
+.card-wide .card-pic {
+  grid-area: pic;
+  aspect-ratio: auto;
+  min-height: 300px;
+  margin: 14px;
+}
+.card-wide .card-title {
+  font-size: clamp(34px, 4vw, 44px);
+}
+.card-wide .card-summary {
+  font-size: 16.5px;
+  max-width: 34em;
+}
+.card-role {
+  font-weight: 600;
+  color: var(--ink);
+}
+.card-mine {
+  display: block;
+  margin-top: 10px;
+}
+.prev-role {
+  margin-top: 26px;
+  font-size: 16px;
+  color: var(--mat-ink-soft);
+}
+
+/* project grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 44px 28px;
+}
+.grid-cell {
+  display: flex;
+}
+.grid-cell > .card {
+  flex: 1;
+}
+.more-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  min-height: 220px;
+  padding: 30px;
+  border: 1.5px dashed rgba(236, 230, 207, 0.4);
+  border-radius: var(--radius);
+  color: var(--mat-ink);
+  text-decoration: none;
+  transition: background-color 0.15s, border-color 0.15s;
+}
+.more-card:hover {
+  background: rgba(236, 230, 207, 0.05);
+  border-color: var(--mat-ink);
+}
+.more-title {
+  font-family: var(--display);
+  font-variation-settings: 'SOFT' 100;
+  font-size: 30px;
+  line-height: 1.1;
+}
+.more-sub {
+  color: var(--mat-ink-soft);
+}
+.more-go {
+  margin-top: 12px;
+  color: var(--tape);
+  font-weight: 600;
+}
+
+@media (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 760px) {
+  .card-wide {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'pic'
+      'body'
+      'foot';
+  }
+  .card-wide .card-pic {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+    margin: 12px 12px 0;
+  }
+  .card-wide .card-body {
+    padding: 18px 20px 0;
+  }
+  .card-wide .card-foot {
+    margin: 16px 20px 18px;
+  }
+}
+@media (max-width: 640px) {
+  .intro {
+    padding-top: 48px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .block {
+    margin-top: 72px;
+  }
+}
