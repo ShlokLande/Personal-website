@@ -1,4 +1,4 @@
-import { Screenshot, Photo, DiagramFigure } from '../../components/Figure.jsx'
+import { Screenshot, DiagramFigure } from '../../components/Figure.jsx'
 import { MatchaArch } from '../../diagrams/index.js'
 
 export const meta = {
@@ -16,7 +16,6 @@ export const page = {
   summary: 'A two-sided volunteer-matching platform for BC nonprofits, built in under 24 hours.',
   hackathon: true,
   facts: [
-    { label: 'What I did', value: 'Live dashboards, the churn model, role-based access, urgent requests' },
     { label: 'Built with', value: 'Next.js, TypeScript, Tailwind, Supabase, PostgreSQL, Python' },
     { label: 'When', value: 'youCode 2026' },
     {
@@ -78,14 +77,15 @@ export const page = {
       ),
     },
     {
-      id: 'built',
-      label: 'What I built',
+      id: 'features',
+      label: 'Features',
       body: (
         <ul className="wu-list">
-          <li>A logistic regression churn model in Python that flags volunteers at risk of dropping off.</li>
-          <li>Role-based access with Supabase Auth, and the separate volunteer and coordinator dashboards.</li>
-          <li>The urgent-request system and the interest-based onboarding that matches new sign-ups to opportunities.</li>
-          <li>Realtime subscriptions so the dashboards update without a refresh.</li>
+          <li>Interest-based onboarding that matches new volunteers to open opportunities.</li>
+          <li>Separate volunteer and coordinator dashboards, with role-based access through Supabase Auth.</li>
+          <li>Dashboards that update live, without a refresh.</li>
+          <li>Urgent requests that coordinators push to volunteers in real time.</li>
+          <li>A churn model (logistic regression in Python) that flags volunteers at risk of dropping off.</li>
         </ul>
       ),
     },
@@ -99,7 +99,6 @@ export const page = {
             executives. The site is still live at{' '}
             <a href="https://match-a-seven.vercel.app" target="_blank" rel="noopener">match-a-seven.vercel.app</a>.
           </p>
-          <Photo n={3} path="projects/match-a/youcode.jpg" alt="Photo from youCode 2026" caption="At youCode 2026." />
         </>
       ),
     },

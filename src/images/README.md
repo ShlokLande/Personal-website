@@ -6,13 +6,10 @@ Until then the box stays, so nothing breaks.
 
 | File | Where it shows | What to put there |
 | --- | --- | --- |
-| `solar/car.jpg` | Home page Solar card, UBC Solar page | A photo of the car or the team |
-| `solar/logic-analyzer.png` | UBC Solar page, I2C section | A logic analyzer capture of the bus |
+| `solar/car.jpg` | Home page Solar card | A photo of the car |
+| `solar/team.jpg` | UBC Solar page, "The team" section | A photo of the whole team |
 | `solar/grafana.png` | UBC Solar page, dashboards section | One of the Grafana dashboards |
 | `projects/match-a/home.png` | match-a card and page | Screenshot of match-a-seven.vercel.app |
-| `projects/match-a/youcode.jpg` | match-a page, result section | A photo from youCode |
-| `projects/dermai/home.png` | DermAI card and page | Screenshot of dermai-gray.vercel.app |
-| `projects/code-unity/home.png` | Code Unity card and page | Screenshot of codeunity.wixsite.com/website-1 |
-| `projects/learnloop/home.png` | LearnLoop card and page | Screenshot of LearnLoop |
 
-Screenshots look best at about 1440 x 900 (a 16:9 crop of the top of the page).
+Any size works and nothing gets cropped on the project cards, but screenshots close to 16:9 (a wide browser
+window) fill the card best.

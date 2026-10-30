@@ -12,10 +12,9 @@ export const meta = {
 
 export const page = {
   kicker: 'AWS hackathon, 6 hours',
-  summary: 'An app that finds students who already share your commute, so you can travel together. I owned the AWS backend.',
+  summary: 'An app that finds students who already share your commute, so you can travel together.',
   hackathon: true,
   facts: [
-    { label: 'What I did', value: 'The AWS backend: sign-in, database, matching pipeline' },
     { label: 'Built with', value: 'React Native, AWS Lambda, DynamoDB, Cognito, Amazon Bedrock' },
     { label: 'When', value: 'Summer 2026' },
   ],
@@ -72,22 +71,20 @@ export const page = {
       ),
     },
     {
-      id: 'built',
-      label: 'What I built',
+      id: 'features',
+      label: 'Features',
       body: (
         <>
           <ul className="wu-list">
-            <li>
-              The AWS backend: Cognito sign-in, the DynamoDB tables for sessions, overlap scores and users, and the Lambda
-              execution role.
-            </li>
-            <li>The geohash location model and the pairwise overlap engine.</li>
-            <li>The Bedrock integration for match explanations.</li>
-            <li>A trimmed copy of TransLink&apos;s GTFS feed for the routes in our demo.</li>
+            <li>Sign-in with Amazon Cognito.</li>
+            <li>Commutes stored as geohash cells, so raw GPS never leaves the phone.</li>
+            <li>A Lambda overlap engine that finds commutes that keep overlapping.</li>
+            <li>Plain-language match explanations from Amazon Bedrock.</li>
+            <li>Demo routes from a trimmed copy of TransLink&apos;s GTFS feed.</li>
           </ul>
           <p className="wu-note">
-            Our workshop sandbox account blocked Cognito in its default region, so I moved the whole stack to us-east-1
-            partway through the hackathon.
+            Our workshop sandbox account blocked Cognito in its default region, so we moved the stack to us-east-1 partway
+            through the hackathon.
           </p>
         </>
       ),

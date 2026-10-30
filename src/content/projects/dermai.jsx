@@ -1,6 +1,3 @@
-import { Screenshot, DiagramFigure } from '../../components/Figure.jsx'
-import { DermaiFlow } from '../../diagrams/index.js'
-
 export const meta = {
   slug: 'dermai',
   title: 'DermAI',
@@ -8,7 +5,6 @@ export const meta = {
   summary: 'Upload a selfie and get structured skincare recommendations back from the Gemini API.',
   tags: ['Gemini API', 'JavaScript'],
   live: { href: 'https://dermai-gray.vercel.app', label: 'Live site' },
-  image: { src: 'projects/dermai/home.png', alt: 'DermAI home page' },
 }
 
 const CONCERNS = ['Acne and blemishes', 'Fine lines', 'Dark spots', 'Uneven texture', 'Redness', 'Large pores', 'Dryness', 'Oil control']
@@ -35,8 +31,6 @@ export const page = {
       label: 'Overview',
       body: (
         <>
-          <Screenshot n={1} path="projects/dermai/home.png" alt="DermAI home page" url="dermai-gray.vercel.app"
-            caption="The DermAI landing page." />
           <p>
             DermAI looks at a selfie and suggests a skincare routine. It needs no sign-up, and results come back in seconds.
           </p>
@@ -48,9 +42,6 @@ export const page = {
       label: 'How it works',
       body: (
         <>
-          <DiagramFigure n={2} caption="One photo in, a structured routine out.">
-            <DermaiFlow />
-          </DiagramFigure>
           <p>
             The app sends the photo to the Gemini API with a prompt that asks for structured output: the concerns it sees
             and what to do about each. Asking for structure turns a free-form model answer into something the page can

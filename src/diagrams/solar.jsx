@@ -182,17 +182,22 @@ export function BusLoad() {
 /* The ground side of telemetry. */
 export function TelemetryPipeline() {
   return (
-    <Diagram w={760} h={200} label="Telemetry stack: CAN frames arrive from the car, a parser decodes them with the car's DBC file, InfluxDB stores them, and Grafana dashboards built on Flux queries show them to the pit crew.">
-      <Box x={14} y={70} w={128} h={60} title="CAN frames" sub="from the car" />
-      <Arrow d="M142 100 H182" />
-      <Region x={186} y={14} w={420} h={172} label="Run locally in Docker" />
-      <Box x={204} y={70} w={122} h={60} title="Parser" sub="decodes with DBC" />
-      <Arrow d="M326 100 H346" />
-      <Box x={348} y={70} w={110} h={60} title="InfluxDB" />
-      <Arrow d="M458 100 H478" />
-      <Box x={480} y={70} w={112} h={60} title="Grafana" sub="Flux queries" tone="leaf" />
-      <Arrow d="M606 100 H632" />
-      <Box x={634} y={70} w={114} h={60} title="Pit crew" sub="during testing" tone="hi" />
+    <Diagram w={760} h={250} label="Telemetry stack: CAN frames from the car are sent over the air by radio and by cellular, and either link delivers them to the stack running locally in Docker. There a parser decodes them with the car's DBC file, InfluxDB stores them, and Grafana dashboards built on Flux queries show them to the pit crew.">
+      <Box x={10} y={95} w={112} h={60} title="CAN frames" sub="from the car" />
+      <Arrow d="M122 116 H140 V65 H156" />
+      <Arrow d="M122 134 H140 V185 H156" />
+      <Box x={158} y={40} w={104} h={50} title="Radio" />
+      <Box x={158} y={160} w={104} h={50} title="Cellular" />
+      <Arrow d="M262 65 H280 V116 H298" />
+      <Arrow d="M262 185 H280 V134 H298" />
+      <Region x={288} y={14} w={338} h={222} label="Run locally in Docker" />
+      <Box x={300} y={95} w={112} h={60} title="Parser" sub="decodes with DBC" />
+      <Arrow d="M412 125 H424" />
+      <Box x={426} y={95} w={86} h={60} title="InfluxDB" />
+      <Arrow d="M512 125 H524" />
+      <Box x={526} y={95} w={90} h={60} title="Grafana" sub="Flux queries" tone="leaf" />
+      <Arrow d="M616 125 H648" />
+      <Box x={650} y={95} w={104} h={60} title="Pit crew" sub="during testing" tone="hi" />
     </Diagram>
   )
 }

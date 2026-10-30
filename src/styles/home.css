@@ -49,9 +49,6 @@
     'body pic'
     'foot pic';
 }
-.card-wide::before {
-  left: 22%;
-}
 .card-wide .card-body {
   grid-area: body;
   padding: 30px 30px 0;
@@ -59,6 +56,9 @@
 .card-wide .card-foot {
   grid-area: foot;
   margin: 20px 30px 24px;
+}
+.card-wide .card-pic > img {
+  object-fit: cover; /* the Solar photo fills its frame */
 }
 .card-wide .card-pic {
   grid-area: pic;
@@ -92,6 +92,42 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 44px 28px;
+}
+.grid-featured {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 44px 36px;
+}
+.grid-small {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px 24px;
+  margin-top: 52px;
+}
+.card-small .card-body {
+  padding: 22px 18px 0;
+}
+.card-small .card-title {
+  font-size: 22px;
+}
+.card-small .card-summary {
+  font-size: 14.5px;
+}
+.card-small .card-foot {
+  margin: 14px 18px 16px;
+  padding-top: 12px;
+}
+.card-small .card-cta {
+  padding: 6px 12px 6px 14px;
+  font-size: 14px;
+}
+.card-small .card-live {
+  font-size: 13.5px;
+}
+.grid-small .more-card {
+  min-height: 0;
+  padding: 22px;
+}
+.grid-small .more-title {
+  font-size: 24px;
 }
 .grid-cell {
   display: flex;

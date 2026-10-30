@@ -12,8 +12,8 @@ export const person = {
 
 /* Order here is the order on the home page and in "Next project". */
 export const projects = [
-  { slug: 'match-a', title: 'match-a' },
-  { slug: 'commuteity', title: 'COMMUTEity' },
+  { slug: 'match-a', title: 'match-a', featured: true },
+  { slug: 'commuteity', title: 'COMMUTEity', featured: true },
   { slug: 'code-unity', title: 'Code Unity' },
   { slug: 'dermai', title: 'DermAI' },
   { slug: 'learnloop', title: 'LearnLoop' },

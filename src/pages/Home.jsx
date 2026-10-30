@@ -10,7 +10,8 @@ import { projectModules } from '../content/projects/index.js'
 import { meta as solar } from '../content/solar.jsx'
 import '../styles/home.css'
 
-const TILTS = ['-0.8deg', '0.6deg', '-0.4deg', '0.5deg', '-0.6deg']
+const TILTS = ['-0.7deg', '0.6deg']
+const SMALL_TILTS = ['0.6deg', '-0.5deg', '0.4deg']
 
 function cardImage(image) {
   if (!image) return null
@@ -68,10 +69,24 @@ function Experience() {
         image={cardImage(solar.image)}
         cta="Read more"
       />
-      <p className="prev-role">
-        Before that: VP of Technology at Loop, a Junior Achievement student company in Calgary (2024 to 2025).
-      </p>
     </section>
+  )
+}
+
+/* match-a and COMMUTEity get big cards with a picture; the rest get small text-only cards. */
+function ProjectCard({ slug, withPicture = false }) {
+  const m = projectModules[slug].meta
+  return (
+    <Card
+      className={withPicture ? '' : 'card-small'}
+      href={href(`/projects/${slug}/`)}
+      kicker={m.kicker}
+      title={m.title}
+      summary={m.summary}
+      tags={m.tags}
+      live={m.live}
+      image={withPicture ? cardImage(m.image) : null}
+    />
   )
 }
 
@@ -82,23 +97,23 @@ function Projects() {
         <h2 id="projects-h">Projects</h2>
         <p className="block-hint">Hackathon builds, a nonprofit and side projects. Click a card for diagrams and details.</p>
       </div>
-      <div className="grid">
-        {projects.map(({ slug }, i) => {
-          const m = projectModules[slug].meta
-          return (
+      <div className="grid grid-featured">
+        {projects
+          .filter((p) => p.featured)
+          .map(({ slug }, i) => (
             <div key={slug} className="grid-cell" style={{ '--tilt': TILTS[i % TILTS.length] }}>
-              <Card
-                href={href(`/projects/${slug}/`)}
-                kicker={m.kicker}
-                title={m.title}
-                summary={m.summary}
-                tags={m.tags}
-                live={m.live}
-                image={cardImage(m.image)}
-              />
+              <ProjectCard slug={slug} withPicture />
             </div>
-          )
-        })}
+          ))}
+      </div>
+      <div className="grid grid-small">
+        {projects
+          .filter((p) => !p.featured)
+          .map(({ slug }, i) => (
+            <div key={slug} className="grid-cell" style={{ '--tilt': SMALL_TILTS[i % SMALL_TILTS.length] }}>
+              <ProjectCard slug={slug} />
+            </div>
+          ))}
         <div className="grid-cell">
           <a className="more-card" href={person.github} target="_blank" rel="noopener">
             <span className="more-title">More on GitHub</span>

@@ -1,5 +1,5 @@
 /*
- * A taped card. The title link is stretched over the whole card, so clicking
+ * A paper card. The title link is stretched over the whole card, so clicking
  * anywhere opens the write-up; a "Live site" link sits above it and stays
  * separately clickable.
  */

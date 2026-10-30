@@ -1,13 +1,9 @@
-import { Screenshot, DiagramFigure } from '../../components/Figure.jsx'
-import { LearnloopFlow } from '../../diagrams/index.js'
-
 export const meta = {
   slug: 'learnloop',
   title: 'LearnLoop',
   kicker: 'Solo project',
   summary: 'Study-group scheduling for students, with the scheduling logic in a Node.js backend.',
   tags: ['Node.js', 'JavaScript'],
-  image: { src: 'projects/learnloop/home.png', alt: 'LearnLoop screenshot' },
 }
 
 export const page = {
@@ -32,7 +28,6 @@ export const page = {
       label: 'Overview',
       body: (
         <>
-          <Screenshot n={1} path="projects/learnloop/home.png" alt="LearnLoop screenshot" caption="LearnLoop's main screen." />
           <p>
             LearnLoop helps students set up study-group sessions. Students share when they&apos;re free, and the backend
             schedules sessions and handles the workflow around them automatically.
@@ -41,22 +36,13 @@ export const page = {
       ),
     },
     {
-      id: 'how',
-      label: 'How it works',
-      body: (
-        <DiagramFigure n={2} caption="Availability in, scheduled study sessions out.">
-          <LearnloopFlow />
-        </DiagramFigure>
-      ),
-    },
-    {
-      id: 'built',
-      label: 'What I built',
+      id: 'features',
+      label: 'Features',
       body: (
         <ul className="wu-list">
-          <li>A front end in plain HTML, CSS and JavaScript.</li>
-          <li>A Node.js backend with the scheduling logic for study sessions.</li>
-          <li>Automated handling of each session&apos;s workflow.</li>
+          <li>Students share when they&apos;re free.</li>
+          <li>A Node.js backend schedules study sessions automatically.</li>
+          <li>Each session&apos;s workflow is handled automatically.</li>
         </ul>
       ),
     },

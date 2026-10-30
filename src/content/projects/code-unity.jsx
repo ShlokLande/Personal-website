@@ -1,6 +1,3 @@
-import { Screenshot, DiagramFigure } from '../../components/Figure.jsx'
-import { CodeUnityLoop } from '../../diagrams/index.js'
-
 export const meta = {
   slug: 'code-unity',
   title: 'Code Unity',
@@ -8,7 +5,6 @@ export const meta = {
   summary: 'Free weekly programming lessons for youth: 24 lessons, about 10 students each week.',
   tags: ['Teaching', 'Curriculum'],
   live: { href: 'https://codeunity.wixsite.com/website-1', label: 'Website' },
-  image: { src: 'projects/code-unity/home.png', alt: 'Code Unity website' },
 }
 
 export const page = {
@@ -34,8 +30,6 @@ export const page = {
       label: 'Overview',
       body: (
         <>
-          <Screenshot n={1} path="projects/code-unity/home.png" alt="Code Unity website" url="codeunity.wixsite.com"
-            caption="The Code Unity site, where students signed up for classes." />
           <p>
             Code Unity ran free online programming classes for kids and teens who were new to coding. Classes were live on
             Google Meet every Saturday, and everything was posted afterwards so students could catch up or review.
@@ -48,9 +42,6 @@ export const page = {
       label: 'How a week worked',
       body: (
         <>
-          <DiagramFigure n={2} caption="The weekly loop we repeated for 24 lessons.">
-            <CodeUnityLoop />
-          </DiagramFigure>
           <ul className="wu-list">
             <li>A one-hour live class on Saturday afternoons.</li>
             <li>Practice problems every week, with answer keys.</li>
