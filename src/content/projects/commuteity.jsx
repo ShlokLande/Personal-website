@@ -82,10 +82,6 @@ export const page = {
             <li>Plain-language match explanations from Amazon Bedrock.</li>
             <li>Demo routes from a trimmed copy of TransLink&apos;s GTFS feed.</li>
           </ul>
-          <p className="wu-note">
-            Our workshop sandbox account blocked Cognito in its default region, so we moved the stack to us-east-1 partway
-            through the hackathon.
-          </p>
         </>
       ),
     },
