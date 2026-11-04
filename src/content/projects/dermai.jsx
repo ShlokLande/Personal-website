@@ -1,7 +1,7 @@
 export const meta = {
   slug: 'dermai',
   title: 'DermAI',
-  kicker: 'Hackathon, built with a friend',
+  kicker: 'Hackathon',
   summary: 'Upload a selfie and get structured skincare recommendations back from the Gemini API.',
   tags: ['Gemini API', 'JavaScript'],
   live: { href: 'https://dermai-gray.vercel.app', label: 'Live site' },
@@ -10,7 +10,7 @@ export const meta = {
 const CONCERNS = ['Acne and blemishes', 'Fine lines', 'Dark spots', 'Uneven texture', 'Redness', 'Large pores', 'Dryness', 'Oil control']
 
 export const page = {
-  kicker: 'Hackathon project, built with a friend',
+  kicker: 'Hackathon',
   summary: 'A skincare analysis web app: upload a selfie and get personalized, structured recommendations from the Gemini API.',
   hackathon: true,
   facts: [

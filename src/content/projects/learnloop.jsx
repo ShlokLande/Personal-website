@@ -1,13 +1,13 @@
 export const meta = {
   slug: 'learnloop',
   title: 'LearnLoop',
-  kicker: 'Solo project',
+  kicker: 'Hackathon',
   summary: 'Study-group scheduling for students, with the scheduling logic in a Node.js backend.',
   tags: ['Node.js', 'JavaScript'],
 }
 
 export const page = {
-  kicker: 'Solo project',
+  kicker: 'Hackathon',
   summary: 'A study-group scheduling platform for students, built solo from front end to back end.',
   hackathon: false,
   facts: [
